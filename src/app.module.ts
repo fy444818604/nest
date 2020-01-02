@@ -7,6 +7,7 @@ import { CatsModule } from './cats/cats.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { PhotoModule } from './photo/photo.module';
 import { Photo } from './photo/photo.entity';
+import { Hero } from './hero/hero.entity';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 import { HeroesModule } from './hero/heroes.module';
@@ -23,7 +24,10 @@ import { HeroesModule } from './hero/heroes.module';
 		  database:'test',
 		  username:'root',
 		  password:'root',
-		  entities:[Photo],
+		  entities:[
+			  Photo,
+			  Hero
+		  ],
 		  synchronize:true,
 	  }),
 	  CatsModule,

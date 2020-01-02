@@ -1,5 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
-@Entity('hreo')
+@Entity('hero')
 export class Hero {
   @PrimaryGeneratedColumn()
   id: number;
@@ -7,6 +7,6 @@ export class Hero {
   @Column()
   name: string;
 
-  @Column({ type: 'number' })
+  @Column()
   power: number;
 }
