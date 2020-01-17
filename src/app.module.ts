@@ -11,6 +11,8 @@ import { Hero } from './hero/hero.entity';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 import { HeroesModule } from './hero/heroes.module';
+import { AuthModule } from './auth/auth.module';
+import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
@@ -32,7 +34,9 @@ import { HeroesModule } from './hero/heroes.module';
 	  }),
 	  CatsModule,
 	  PhotoModule,
-	  HeroesModule
+	  HeroesModule,
+	  AuthModule,
+	  UsersModule
   ],
   controllers: [AppController, CatsController],
   providers: [AppService, CatsService],
