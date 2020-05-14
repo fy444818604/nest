@@ -3,7 +3,9 @@ import { AppService } from './app.service';
 import { AuthGuard } from '@nestjs/passport';
 import { LocalAuthGuard } from './auth/local-auth.guard'
 import { AuthService } from './auth/auth.service';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('token获取')
 @Controller()
 export class AppController {
   constructor(private readonly authService: AuthService) {}

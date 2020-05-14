@@ -87,7 +87,19 @@
                             </li>
                             <li>
                                     <span class="modifier">Async</span>
-                                <a href="#findAll">findAll</a>
+                                <a href="#findAllCat">findAllCat</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#findOneCat">findOneCat</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#removeCat">removeCat</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#update">update</a>
                             </li>
                         </ul>
                     </td>
@@ -123,7 +135,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>create(params)</code>
+                    <code>create(createCatDto: <a href="../classes/CreateCatDto.html">CreateCatDto</a>)</code>
                 </td>
             </tr>
 
@@ -131,14 +143,141 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Post()<br /></code>
+                    <code>@Post(&#x27;/add&#x27;)<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="11"
-                            class="link-to-prism">src/cats/cats.controller.ts:11</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="27"
+                            class="link-to-prism">src/cats/cats.controller.ts:27</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>createCatDto</td>
+                                    <td>
+                                                <code><a href="../classes/CreateCatDto.html" target="_self" >CreateCatDto</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Cat.html" target="_self" >Promise&lt;Cat&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findAllCat"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            findAllCat
+                        </b>
+                        <a href="#findAllCat"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>findAllCat()</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Get()<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="44"
+                            class="link-to-prism">src/cats/cats.controller.ts:44</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Cat.html" target="_self" >Promise&lt;Cat[]&gt;</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findOneCat"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            findOneCat
+                        </b>
+                        <a href="#findOneCat"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>findOneCat(params)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Get(&#x27;/findOne/:menu_id&#x27;)<br />@ApiParam({name: &#x27;menu_id&#x27;, description: &#x27;根据ID查询&#x27;})<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="51"
+                            class="link-to-prism">src/cats/cats.controller.ts:51</a></div>
                 </td>
             </tr>
 
@@ -171,7 +310,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                        <b>Returns : </b>        <code><a href="../classes/Cat.html" target="_self" >Promise&lt;Cat&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -185,20 +324,20 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="findAll"></a>
+                    <a name="removeCat"></a>
                     <span class="name">
                         <b>
                             <span class="modifier">Async</span>
-                            findAll
+                            removeCat
                         </b>
-                        <a href="#findAll"><span class="icon ion-ios-link"></span></a>
+                        <a href="#removeCat"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>findAll()</code>
+                    <code>removeCat(params)</code>
                 </td>
             </tr>
 
@@ -206,14 +345,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Get()<br /></code>
+                    <code>@Post(&#x27;/removeCat/:menu_id&#x27;)<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="15"
-                            class="link-to-prism">src/cats/cats.controller.ts:15</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="56"
+                            class="link-to-prism">src/cats/cats.controller.ts:56</a></div>
                 </td>
             </tr>
 
@@ -222,8 +361,126 @@
                 <td class="col-md-4">
 
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../interfaces/Cat.html" target="_self" >Promise&lt;Cat[]&gt;</a></code>
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>params</td>
 
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="update"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            update
+                        </b>
+                        <a href="#update"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>update(menu_id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, createCatDto: <a href="../classes/CreateCatDto.html">CreateCatDto</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Get(&#x27;/update/:menu_id&#x27;)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="37"
+                            class="link-to-prism">src/cats/cats.controller.ts:37</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>menu_id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>createCatDto</td>
+                                    <td>
+                                                <code><a href="../classes/CreateCatDto.html" target="_self" >CreateCatDto</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Cat.html" target="_self" >Promise&lt;Cat&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
                     </div>
                 </td>
             </tr>
@@ -233,23 +490,63 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Controller, Get, Post, Req, Body, Param } from &#x27;@nestjs/common&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Controller, Get, Post, Req, Body, Param, Query } from &#x27;@nestjs/common&#x27;;
 import { Request } from &#x27;express&#x27;;
 // import { CreateCatDto } from &#x27;./dto/create-cat.dto&#x27;;
 import { CatsService } from &#x27;./cats.service&#x27;;
-import { Cat } from &#x27;./interfaces/cat.interface&#x27;;
+import { CatInterface } from &#x27;./interfaces/cat.interface&#x27;;
+import { Cat } from &#x27;./cat.entity&#x27;;
+import { CreateCatDto } from &#x27;./dto/create-cat.dto&#x27;
+import { ApiBody, ApiTags, ApiHeader, ApiSecurity, ApiBearerAuth, ApiParam, ApiQuery } from &#x27;@nestjs/swagger&#x27;;
 
+@ApiTags(&#x27;cats&#x27;)
+// @ApiHeader({
+//   name: &#x27;Authorization&#x27;,
+//   description: &#x27;Auth token&#x27;
+// })
+// @ApiSecurity(&#x27;basic&#x27;)
+@ApiBearerAuth()
 @Controller(&#x27;cats&#x27;)
 export class CatsController {
 	constructor(private readonly catsService:CatsService){}
-	@Post()
-	async create(@Body() params)	{
-		this.catsService.create(params);
+	
+	@Post(&#x27;/add&#x27;)
+	// @ApiBody({
+	// 	schema:{
+			
+	// 	}
+	// })
+	async create(@Body() createCatDto:CreateCatDto): Promise&lt;Cat&gt; {
+		console.log(11)
+		console.log(createCatDto)
+		return this.catsService.create(createCatDto);
 	}
+	
+	@Get(&#x27;/update/:menu_id&#x27;)
+	// @ApiQuery({
+	// 	name:&#x27;&#x27;
+	// })
+	async update(@Param(&#x27;menu_id&#x27;) menu_id: number, @Query() createCatDto:CreateCatDto): Promise&lt;Cat&gt; {
+		console.log(createCatDto)
+		console.log(menu_id)
+		return this.catsService.update(menu_id,createCatDto);
+	}
+	
 	@Get()
-	async findAll(): Promise&lt;Cat[]&gt; {
+	async findAllCat(): Promise&lt;Cat[]&gt; {
 		console.log(123)
-		return this.catsService.findAll();
+		return this.catsService.findAllCat();
+	}
+	
+	@Get(&#x27;/findOne/:menu_id&#x27;)
+	@ApiParam({ name: &#x27;menu_id&#x27;, description: &#x27;根据ID查询&#x27; })
+	async findOneCat(@Param(&#x27;menu_id&#x27;) params): Promise&lt;Cat&gt; {
+		return this.catsService.findOneCat(params);
+	}
+	
+	@Post(&#x27;/removeCat/:menu_id&#x27;)
+	async removeCat(@Param() params): Promise&lt;void&gt; {
+		return this.catsService.removeCat(params.menu_id)
 	}
 }
 </code></pre>
