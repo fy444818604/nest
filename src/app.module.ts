@@ -16,8 +16,9 @@ import { HeroesModule } from './hero/heroes.module';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { LoggerMiddleware } from './common/middleware/logger.middleware';
-import { APP_PIPE } from '@nestjs/core';
+import { APP_PIPE, APP_GUARD, APP_INTERCEPTOR } from '@nestjs/core';
 import { ValidationPipe } from './common/pipe/validation.pipe'
+// import { AuthGuard } from '@nestjs/passport';
 
 @Module({
   imports: [

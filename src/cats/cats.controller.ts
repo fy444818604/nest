@@ -1,12 +1,14 @@
-import { Controller, Get, Post, Req, Body, Param, Query, HttpException, HttpStatus, BadRequestException } from '@nestjs/common';
+import { Controller, Get, Post, Req, Body, Param, Query, HttpException, HttpStatus, BadRequestException, UseGuards } from '@nestjs/common';
 import { Request } from 'express';
-// import { CreateCatDto } from './dto/create-cat.dto';
 import { CatsService } from './cats.service';
 import { CatInterface } from './interfaces/cat.interface';
 import { Cat } from './cat.entity';
 import { CreateCatDto } from './dto/create-cat.dto'
 import { ApiBody, ApiTags, ApiHeader, ApiSecurity, ApiBearerAuth, ApiParam, ApiQuery } from '@nestjs/swagger';
-import { UsePipes } from '@nestjs/common'
+import { UsePipes, UseInterceptors } from '@nestjs/common'
+import { LoggingInterceptor } from '../common/interceptor/logging.interceptor'
+import { TransformInterceptor } from '../common/interceptor/transform.interceptor'
+import { AuthGuard } from '@nestjs/passport';
 
 @ApiTags('cats')
 // @ApiHeader({
@@ -16,6 +18,7 @@ import { UsePipes } from '@nestjs/common'
 // @ApiSecurity('basic')
 @ApiBearerAuth()
 @Controller('cats')
+@UseGuards(AuthGuard('jwt'))
 export class CatsController {
 	constructor(private readonly catsService:CatsService){}
 	

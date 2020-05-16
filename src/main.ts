@@ -2,9 +2,12 @@ import { NestFactory } from '@nestjs/core';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { AppModule } from './app.module';
 import { ValidationPipe } from './common/pipe/validation.pipe'
+import { TransformInterceptor } from './common/interceptor/transform.interceptor'
+import { JwtStrategy } from './auth/jwt.strategy'
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  app.setGlobalPrefix('v1');
   
   app.enableCors();
   
@@ -19,10 +22,14 @@ async function bootstrap() {
 	  // })
 	  .addBearerAuth()
       .build();
-  const document = SwaggerModule.createDocument(app, options);
+  const document = SwaggerModule.createDocument(app, options,{
+	ignoreGlobalPrefix: false
+  });
   SwaggerModule.setup('api', app, document);
   
   app.useGlobalPipes(new ValidationPipe());
+  app.useGlobalInterceptors(new TransformInterceptor());
+  // app.useGlobalGuards(new JwtStrategy());
   
   await app.listen(3000);
 }
