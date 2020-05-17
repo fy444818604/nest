@@ -25,7 +25,7 @@ import { UsersModule } from './users/users.module';
 		  port:3306,
 		  database:'test',
 		  username:'root',
-		  password:'root',
+		  password:'Smile_5201314',
 		  entities:[
 			  Photo,
 			  Hero
