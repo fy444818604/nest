@@ -66,22 +66,6 @@
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <h6><b>Properties</b></h6>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <ul class="index-list">
-                            <li>
-                                    <span class="modifier">Private</span>
-                                    <span class="modifier">Readonly</span>
-                                <a href="#cats">cats</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -95,7 +79,20 @@
                                 <a href="#create">create</a>
                             </li>
                             <li>
-                                <a href="#findAll">findAll</a>
+                                    <span class="modifier">Async</span>
+                                <a href="#findAllCat">findAllCat</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#findOneCat">findOneCat</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#removeCat">removeCat</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#update">update</a>
                             </li>
                         </ul>
                     </td>
@@ -109,6 +106,54 @@
     </table>
 </section>
 
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(cats: <a href="../classes/Cat.html">Repository<Cat></a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/cats/cats.service.ts:9</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>cats</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/Cat.html" target="_self" >Repository&lt;Cat&gt;</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
 
             <section>
     
@@ -130,15 +175,15 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>create(cat: <a href="../interfaces/Cat.html">Cat</a>)</code>
+<code>create(createCatDto: <a href="../classes/CreateCatDto.html">CreateCatDto</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">src/cats/cats.service.ts:12</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="15"
+                            class="link-to-prism">src/cats/cats.service.ts:15</a></div>
                 </td>
             </tr>
 
@@ -158,9 +203,9 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>cat</td>
+                                    <td>createCatDto</td>
                                     <td>
-                                                <code><a href="../interfaces/Cat.html" target="_self" >Cat</a></code>
+                                                <code><a href="../classes/CreateCatDto.html" target="_self" >CreateCatDto</a></code>
                                     </td>
 
                                     <td>
@@ -175,7 +220,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                        <b>Returns : </b>        <code><a href="../classes/Cat.html" target="_self" >Promise&lt;Cat&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -189,26 +234,28 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="findAll"></a>
+                    <a name="findAllCat"></a>
                     <span class="name">
                         <b>
-                            findAll
+                            <span class="modifier">Async</span>
+                            findAllCat
                         </b>
-                        <a href="#findAll"><span class="icon ion-ios-link"></span></a>
+                        <a href="#findAllCat"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>findAll()</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>findAllCat()</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="16"
-                            class="link-to-prism">src/cats/cats.service.ts:16</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="40"
+                            class="link-to-prism">src/cats/cats.service.ts:40</a></div>
                 </td>
             </tr>
 
@@ -217,57 +264,241 @@
                 <td class="col-md-4">
 
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../interfaces/Cat.html" target="_self" >Cat[]</a></code>
+                        <b>Returns : </b>        <code><a href="../classes/Cat.html" target="_self" >Promise&lt;Cat[]&gt;</a></code>
 
                     </div>
                 </td>
             </tr>
         </tbody>
     </table>
-</section>
-            <section>
-    
-        <h3 id="inputs">
-            Properties
-        </h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="cats"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                                <span class="modifier">Readonly</span>
-                            cats</b>
-                            <a href="#cats"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="../interfaces/Cat.html" target="_self" >Cat[]</a></code>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>[{
-		name:&#x27;张三&#x27;,
-		age:5,
-		breed:&#x27;adsas&#x27;
-	}]</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="6" class="link-to-prism">src/cats/cats.service.ts:6</a></div>
-                            </td>
-                        </tr>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findOneCat"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            findOneCat
+                        </b>
+                        <a href="#findOneCat"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>findOneCat(menu_id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
 
 
-            </tbody>
-        </table>
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="44"
+                            class="link-to-prism">src/cats/cats.service.ts:44</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>menu_id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Cat.html" target="_self" >Promise&lt;Cat&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="removeCat"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            removeCat
+                        </b>
+                        <a href="#removeCat"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>removeCat(menu_id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="48"
+                            class="link-to-prism">src/cats/cats.service.ts:48</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>menu_id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="update"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            update
+                        </b>
+                        <a href="#update"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>update(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, CreateCatDto: <a href="../classes/CreateCatDto.html">CreateCatDto</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="27"
+                            class="link-to-prism">src/cats/cats.service.ts:27</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>CreateCatDto</td>
+                                    <td>
+                                                <code><a href="../classes/CreateCatDto.html" target="_self" >CreateCatDto</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Cat.html" target="_self" >Promise&lt;Cat&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </section>
 
     </div>
@@ -275,23 +506,69 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@nestjs/common&#x27;;
-import { Cat } from &#x27;./interfaces/cat.interface&#x27;;
+import { InjectRepository } from &#x27;@nestjs/typeorm&#x27;;
+import { Repository } from &#x27;typeorm&#x27;;
+import { Cat } from &#x27;./cat.entity&#x27;;
+import { CatInterface } from &#x27;./interfaces/cat.interface&#x27;;
+import { CreateCatDto } from &#x27;./dto/create-cat.dto&#x27;
 
 @Injectable()
 export class CatsService {
-	private readonly cats: Cat[] &#x3D; [{
-		name:&#x27;张三&#x27;,
-		age:5,
-		breed:&#x27;adsas&#x27;
-	}];
+	constructor(
+	    @InjectRepository(Cat)
+	    private readonly cats: Repository&lt;Cat&gt;,
+	) {}
 	
-	create(cat: Cat) {
-		this.cats.push(cat);
+	create(createCatDto: CreateCatDto): Promise&lt;Cat&gt; {
+		console.log(createCatDto)
+		const cat &#x3D; new Cat();
+		cat.menu_id &#x3D; createCatDto.menu_id;
+		cat.menu_text &#x3D; createCatDto.menu_text;
+		cat.menu_icon &#x3D; createCatDto.menu_icon;
+		cat.menu_href &#x3D; createCatDto.menu_href;
+		console.log(cat)
+		
+		return this.cats.save(cat);
 	}
 	
-	findAll(): Cat[] {
-		return this.cats;
+	async update(id: number,CreateCatDto: CreateCatDto): Promise&lt;Cat&gt; {
+		console.log(id)
+		console.log(CreateCatDto)
+		let catUpdate &#x3D; await this.cats.findOne(CreateCatDto.menu_id)
+		// const cat &#x3D; new Cat();
+		// cat.menu_id &#x3D; CreateCatDto.menu_id;
+		catUpdate.menu_text &#x3D; CreateCatDto.menu_text;
+		catUpdate.menu_icon &#x3D; CreateCatDto.menu_icon;
+		catUpdate.menu_href &#x3D; CreateCatDto.menu_href;
+		
+		return this.cats.save(catUpdate);
 	}
+
+	async findAllCat(): Promise&lt;Cat[]&gt; {
+	    return await this.cats.find();
+	}
+	
+	async findOneCat(menu_id: string): Promise&lt;Cat&gt; {
+	    return await this.cats.findOne(menu_id);
+	}
+	
+	async removeCat(menu_id: string): Promise&lt;void&gt; {
+	    await this.cats.delete(menu_id);
+	}
+	
+	// private readonly cats: CatInterface[] &#x3D; [{
+	// 	name:&#x27;张三1&#x27;,
+	// 	age:5,
+	// 	breed:&#x27;adsas&#x27;
+	// }];
+	
+	// create(cat: CatInterface) {
+	// 	this.cats.push(cat);
+	// }
+	
+	// findAllCat(): CatInterface[] {
+	// 	return this.cats;
+	// }
 }
 </code></pre>
     </div>
